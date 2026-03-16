@@ -1,5 +1,5 @@
 # ==============================================================================
-# Signature Scoring Pipeline (Data Output Only)
+# Signature Scoring Pipeline
 # Description: Calculates signature scores for defined gene sets across single-cell
 #              populations and exports the results as a clean CSV file.
 # ==============================================================================
