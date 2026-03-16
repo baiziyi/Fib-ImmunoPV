@@ -1,0 +1,102 @@
+
+<ELU xmlns="http://www.accelrys.com/dsm/elu/2">
+  <experiment Expanded="Clustering" Guid="{81247919-8B1D-4E7E-A359-27E31BE72DE8}" protocol="Protocols/BIOVIA Discovery Studio/Discovery Studio/Macromolecules/Dock Proteins/Dock Proteins (ZDOCK)" protocolName="Dock Proteins (ZDOCK)" version="1">
+    <Accl:mpropval name="Advanced" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Angular Step Size" type="LongType">
+      <Accl:value>6</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Clustering" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Clustering Interface Cutoff" type="DoubleType">
+      <Accl:value>9.0</Accl:value>
+      <Accl:transformData>9.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Clustering Maximum Number of Clusters" type="LongType">
+      <Accl:value>60</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Clustering RMSD Cutoff" type="DoubleType">
+      <Accl:value>6.0</Accl:value>
+      <Accl:transformData>6.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Clustering Top Poses" type="LongType">
+      <Accl:value>2000</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="DSRunInteractive" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Distance Cutoff" type="DoubleType">
+      <Accl:value>10.0</Accl:value>
+      <Accl:transformData>10.0</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Filter Poses" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Ligand Protein" type="T2StructureType">
+      <Accl:value>Molecule:HLA</Accl:value>
+      <Accl:transformData>813458e6-486a-6756-7b-55-91-c5-5c-32-ad-a9</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Input Receptor Protein" type="T1StructureType">
+      <Accl:value>Molecule:4H2DB</Accl:value>
+      <Accl:transformData>813458e6-486a-6756-7b-55-91-c5-5c-32-ad-a9</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ligand Binding Site Residues" type="ResiduegroupOfT2StructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Ligand Blocked Residues" type="ResiduegroupOfT2StructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Non-deterministic FFT optimization" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Preserve Order" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server" type="StringType">
+      <Accl:value>localhost</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Parallel Processing Server Processes" type="StringType">
+      <Accl:value>2</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="PreserveDisplayStyle" type="BoolType">
+      <Accl:value>True</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Process Best Poses Only" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Receptor Binding Site Residues" type="ResiduegroupOfT1StructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Receptor Blocked Residues" type="ResiduegroupOfT1StructureType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting" type="GroupType">
+      <Accl:value></Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Reporting Stylesheet" type="StylesheetType">
+      <Accl:value>{42691EC8-0CE0-4DB9-8B3C-5379CBB967A7}</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Save Intermediate Files" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="Use Electrostatic and Desolvation Energy" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="ZRank" type="BoolType">
+      <Accl:value>False</Accl:value>
+      <Accl:transformData>False</Accl:transformData>
+    </Accl:mpropval>
+    <Accl:mpropval name="ZRank Report Score Components" type="BoolType">
+      <Accl:value>False</Accl:value>
+    </Accl:mpropval>
+    <Accl:mpropval name="ZRank Top Poses" type="LongType">
+      <Accl:value>2000</Accl:value>
+    </Accl:mpropval>
+  </experiment>
+
+</ELU>
