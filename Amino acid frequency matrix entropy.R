@@ -1,5 +1,5 @@
 # ==============================================================================
-# Immunopeptidome Motif Distance and Entropy Pipeline (Data Output Only)
+# Immunopeptidome Motif Distance and Entropy Pipeline
 # ==============================================================================
 
 rm(list=ls())
