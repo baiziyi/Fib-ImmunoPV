@@ -10,7 +10,7 @@ set -e
 
 # --- 1. Define Global Parameters  ---
 INPUT_DIR="."                     # Directory containing raw fastq.gz files
-OUTPUT_DIR="../TRB_mixcr4"        # Main output directory
+OUTPUT_DIR="/home/Project/Lung_fibrosis_Immupep/Figure_Data/TRB_mixcr4"        # Main output directory
 SPECIES="mmu"                     # Species (mmu for mouse, hsa for human)
 MEMORY="40g"                      # Java heap memory limit
 THREADS=8                         # Number of threads (optional, if you want to limit CPU usage)
