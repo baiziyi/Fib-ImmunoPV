@@ -9,7 +9,7 @@
 set -e
 
 # --- 1. Define Global Parameters  ---
-INPUT_DIR="/home/Project/Lung_fibrosis_Immupep/Figure_Data/Immunopeptidomes/Hsa/raw_data/1.peptide"      # Directory containing peptide list files (.pep or .txt)
+INPUT_DIR="/home/Project/Lung_fibrosis_Immupep/Figure_Data/Immunopeptidomes/Mmu/raw_data/1.peptide"      # Directory containing peptide list files (.pep or .txt)
 OUTPUT_DIR="/home/Project/Lung_fibrosis_Immupep/Figure_Data/NetMHCpan"   # Main directory for prediction results
 MVP_CONFIG_FILE="./mvp_workspace/config.ini" # Path to generate MhcVizPipe config
 
