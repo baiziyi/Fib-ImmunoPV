@@ -81,7 +81,7 @@ print(head(Sigscore_diff))
 # ==============================================================================
 cat("\nRunning Seurat FindAllMarkers...\n")
 
-# 确保输出目录存在
+# Create output directory if it does not exist
 dir.create(dirname(sc_marker_out), recursive = TRUE, showWarnings = FALSE)
 
 use_TS_markers <- FindAllMarkers(
@@ -125,36 +125,31 @@ list_case <- purrr::map2(samples_case, names_case, ~process_peptide_intensity(.x
 # combine list
 all_samples_list <- c(list_ctr, list_case)
 intensity_exp_df <- purrr::reduce(all_samples_list, full_join, by = "Peptide") %>%
-  replace(is.na(.), 0) # 处理 full_join 产生的 NA (某样本中未检测到的肽段)
+  replace(is.na(.), 0)
 
-# 转换为表达矩阵格式
+# Convert to expression matrix format
 intensity_exp_matrix <- as.matrix(intensity_exp_df[, -1])
 rownames(intensity_exp_matrix) <- intensity_exp_df$Peptide
 
-# --- 4.3 动态构建 Limma 设计矩阵 (Design Matrix) ---
-# 动态根据输入的样本数量生成 factor，彻底告别 rep("Ctr", 3)
+# --- 4.3 Dynamically construct Limma design matrix ---
+# Generate factor dynamically based on input sample counts, replacing rep("Ctr", 3)
 group_list <- factor(c(
   rep(group_ctr_name, length(samples_ctr)), 
   rep(group_case_name, length(samples_case))
 ), levels = c(group_ctr_name, group_case_name))
-
-# 修复了原代码的拼写错误 (COPDel.matrix -> model.matrix)
 design <- model.matrix(~ group_list) 
 rownames(design) <- colnames(intensity_exp_matrix)
 
-# --- 4.4 Limma 差异计算 ---
+# --- 4.4 Differential calculation ---
 fit <- lmFit(intensity_exp_matrix, design)
-fit <- eBayes(fit, trend = TRUE)
-
-# coef=2 对应于组别差异 (通常 intercept 是对照组基线，coef=2 是 test_group 的相对变化)
+fit <- eBayes(fit, trend = TRUE
 result_limma <- topTable(fit, coef = 2, n = Inf) 
 
-# 整理输出
+# Output
 final_result_limma <- result_limma %>% 
   mutate(Peptide = rownames(.)) %>%
-  dplyr::select(Peptide, everything()) # 让 Peptide 列排在第一位更美观
+  dplyr::select(Peptide, everything())
 
-# 确保输出目录存在并保存
 dir.create(dirname(limma_out), recursive = TRUE, showWarnings = FALSE)
 writexl::write_xlsx(final_result_limma, limma_out)
 
